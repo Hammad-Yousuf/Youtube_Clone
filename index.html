@@ -1,947 +1,1339 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/styles.css" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- ============================= -->
 
     <title>Youtube</title>
   </head>
   <body>
-    
     <section id="desktop">
-        <!-- Header -->
-    <header class="fixed-top">
+      <!-- Header -->
+      <header class="fixed-top">
         <section id="top_header">
-            <div class="top_header_container">
-                <div class="left_logo ">
-                    <div class="toggler">
-                        <i class="far fa-bars text-white"></i>
-                    </div>
-                    <div class="top_logo">
-                        <img src="./Images/YouTube-Logo.png" alt="" class="logo">
-                    </div>
-                </div>
-                <div class="center_search text-center d-flex">
-                    <div class="search_bar">
-                        <input type="text" name="" id="" class="search" placeholder="Search">
-                        <button class="search_btn"><i class="far fa-search"></i></button>
-                    </div>
-                    <button class="mike"><i class="far fa-microphone"></i></button>
-                </div>
-                <div class="right_icons">
-                    <div class="camera_icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="app_icon">
-                        <i class="fas fa-th"></i>
-                    </div>
-                    <div class="bell_icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <div class="avatar_container">
-                        <img src="./Images/round_icon.png" alt="" class="avatar">
-                    </div>
-                </div>
+          <div class="top_header_container">
+            <div class="left_logo">
+              <div class="toggler" id="open_sidebar">
+                <i class="far fa-bars text-white"></i>
+              </div>
+              <div class="top_logo">
+                <img src="./Images/sidebar_logo.PNG" alt="" class="logo" />
+              </div>
             </div>
+            <div class="center_search text-center d-flex">
+              <div class="search_bar">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="search"
+                  placeholder="Search"
+                />
+                <button class="search_btn">
+                  <i class="far fa-search"></i>
+                </button>
+              </div>
+              <button class="mike"><i class="far fa-microphone"></i></button>
+            </div>
+            <div class="right_icons">
+              <div class="camera_icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <div class="app_icon">
+                <i class="fas fa-th"></i>
+              </div>
+              <div class="bell_icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <div class="avatar_container">
+                <img src="./Images/round_icon.png" alt="" class="avatar" />
+              </div>
+            </div>
+          </div>
         </section>
-    </header>
-    <section id="body_container">
+      </header>
+      <section id="body_container">
+        <div class="overlay" id="overlay"></div>
+        <section id="main_sidebar">
+          <div class="sidebar_head">
+            <div class="toggler" id="close_sidebar">
+              <i class="far fa-bars text-white"></i>
+            </div>
+            <div class="sidebar_logo_container">
+              <img
+                src="./Images/sidebar_logo.PNG"
+                alt="Youtube"
+                class="sidebar_logo"
+              />
+            </div>
+          </div>
+        </section>
         <section id="sidebar">
-            <div class="sidebar_icon_container">
-                <a href="">
-                    <div class="side_icon"><i class="fas fa-home"></i></div>
-                    <div class="side_text"><p>Home</p></div>
-                </a>
-            </div>
-            <div class="sidebar_icon_container">
-                <a href="">
-                    <div class="side_icon">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <div class="side_text">
-                        <p>Explore</p>
-                    </div>
-                </a>
-            </div>
-            <div class="sidebar_icon_container">
-                <a href="">
-                    <div class="side_icon">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div class="side_text">
-                        <p>Subcriptions</p>
-                    </div>
-                </a>
-            </div>
-            <div class="sidebar_icon_container">
-                <a href="">
-                    <div class="side_icon">
-                        <i class="fad fa-photo-video"></i>
-                    </div>
-                    <div class="side_text"><p>Liabrary</p></div>
-                </a>
-            </div>
+          <div class="sidebar_icon_container">
+            <a href="">
+              <div class="side_icon"><i class="bx bxs-home"></i></div>
+              <div class="side_text"><p>Home</p></div>
+            </a>
+          </div>
+          <div class="sidebar_icon_container">
+            <a href="">
+              <div class="side_icon">
+                <i class="bx bxs-compass"></i>
+              </div>
+              <div class="side_text">
+                <p>Explore</p>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar_icon_container">
+            <a href="">
+              <div class="side_icon">
+                <i class='bx bxs-collection'></i>
+              </div>
+              <div class="side_text">
+                <p>Subcriptions</p>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar_icon_container">
+            <a href="">
+              <div class="side_icon">
+                <i class="fad fa-photo-video"></i>
+              </div>
+              <div class="side_text"><p>Liabrary</p></div>
+            </a>
+          </div>
         </section>
         <section id="tags">
-            <div class="tags_container">
-                <div class="tag all">All</div>
-                <div class="tag">Music</div>
-                <div class="tag">Programming</div>
-                <div class="tag">Coding</div>
-                <div class="tag">Game</div>
-                <div class="tag">News</div>
-                <div class="tag">Naat</div>
-                <div class="tag">Maulana</div>
-                <div class="tag">Bayan</div>
-                <div class="tag">Stunt</div>
-                <div class="tag">Vlog</div>
-                <div class="tag">Traveling</div>
-                <div class="tag">Music</div>
-                <div class="tag">Programming</div>
-                <div class="tag">Coding</div>
-                <div class="tag">Game</div>
-                <div class="tag">News</div>
-                <div class="tag">Naat</div>
-                <div class="tag">Maulana</div>
-                <div class="tag">Bayan</div>
-                <div class="tag">Stunt</div>
-            </div>
+          <div class="tags_container">
+            <div class="tag all">All</div>
+            <div class="tag">CSS</div>
+            <div class="tag">Programming</div>
+            <div class="tag">Coding</div>
+            <div class="tag">Game</div>
+            <div class="tag">News</div>
+            <div class="tag">Naat</div>
+            <div class="tag">Maulana</div>
+            <div class="tag">Bayan</div>
+            <div class="tag">Stunt</div>
+            <div class="tag">Vlog</div>
+            <div class="tag">Traveling</div>
+            <div class="tag">Music</div>
+            <div class="tag">Programming</div>
+            <div class="tag">Coding</div>
+            <div class="tag">Game</div>
+            <div class="tag">News</div>
+            <div class="tag">Naat</div>
+            <div class="tag">Maulana</div>
+            <div class="tag">Bayan</div>
+            <div class="tag">Stunt</div>
+          </div>
         </section>
         <main id="main">
-            <div class="video_cards_container">
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
+          <div class="video_cards_container">
+            <div class="video_card">
+              <div class="video">
+                <video
+                  src="./Images/Mustafa Jaan E Rehmat Pe Lakhon Salam - Atif Aslam - Boss Menn.mkv"
+                  id="video"
+                ></video>
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
                 </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
                 </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                       <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
                 </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">
-                        <div class="video_icons">
-                            <div class="top">
-                                <div class="clock"><i class="fas fa-clock"></i></div>
-                                <div class="list"><i class="fab fa-playstation"></i></div>
-                            </div>
-                            <div class="dur">12:28</div>
-                        </div>                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                        </div>
-                        <div class="ch_text">
-                            <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                            <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i></div>
-                            <div class="views_time">12B views <span>.</span> 1 hour ago</div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </main>
-    </section>
 
+            <div class="video_card">
+              <div class="video">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video_card">
+              <div class="video">
+                <img src="./Images/square_icon.webp" alt="" />
+                <div class="video_icons">
+                  <div class="top">
+                    <div class="clock"><i class="fas fa-clock"></i></div>
+                    <div class="list"><i class="fab fa-playstation"></i></div>
+                  </div>
+                  <div class="dur">12:28</div>
+                </div>
+              </div>
+              <div class="desc">
+                <div class="ch_logo">
+                  <img src="./Images/round_icon.png" />
+                </div>
+                <div class="ch_text">
+                  <div
+                    class="title"
+                    title="HTML Tutorial For Beginners - Free Html Tutorial"
+                  >
+                    HTML Tutorial For Beginners - Free Html Tutorial
+                  </div>
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="views_time">
+                    12B views <span>.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
     </section>
 
     <!-- Mobile View -->
 
     <section id="mobile">
-        
-            <div class="mobile_header">
-                <div class="mobile_logo_container">
-                    <img src="./Images/YouTube-Logo.png" alt="Youtube" title="Youtube" class="mobile_logo">
-                </div>
-                <div class="right_icon">
-                    <div class="search_icon">
-                        <i class="fal fa-search"></i>
-                    </div>
-                    <div class="mb_avatar_container">
-                        <img src="./Images/round_icon.png" class="mb_avatar" alt="Youtube">
-                    </div>
-                </div>
-            </div>
-        
-            <div class="tag_header">
-                <div class="mobile_tag_container">
-                    <div class="tag all">All</div>
-                    <div class="tag">Music</div>
-                    <div class="tag">Programming</div>
-                    <div class="tag">Coding</div>
-                    <div class="tag">Game</div>
-                    <div class="tag">News</div>
-                </div>
-            </div>
+      <div class="mobile_header">
+        <div class="mobile_logo_container">
+          <img
+            src="./Images/YouTube-Logo.png"
+            alt="Youtube"
+            title="Youtube"
+            class="mobile_logo"
+          />
+        </div>
+        <div class="right_icon">
+          <div class="search_icon">
+            <i class="fal fa-search"></i>
+          </div>
+          <div class="mb_avatar_container">
+            <img
+              src="./Images/round_icon.png"
+              class="mb_avatar"
+              alt="Youtube"
+            />
+          </div>
+        </div>
+      </div>
 
-            <div class="footer fixed-bottom">
-                <div class="footer_icon">
-                    <i class="fas fa-home"></i>
-                    <p class="icon_text">Home</p>
-                </div>
-                <div class="footer_icon">
-                    <i class="far fa-fire"></i>
-                    <p class="icon_text">Trending</p>
-                </div>
-                <div class="footer_icon">
-                    <i class="fab fa-youtube"></i>
-                    <p class="icon_text">Subscriptions</p>
-                </div>
-                <div class="footer_icon">
-                    <i class="fad fa-photo-video"></i>
-                    <p class="icon_text">Liabrary</p>
-                </div>
-            </div>
+      <div class="tag_header">
+        <div class="mobile_tag_container">
+          <div class="tag all">All</div>
+          <div class="tag">Music</div>
+          <div class="tag">Programming</div>
+          <div class="tag">Coding</div>
+          <div class="tag">Game</div>
+          <div class="tag">News</div>
+        </div>
+      </div>
 
-            <div class="mb_video_cards_container">
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video_card">
-                    <div class="video">
-                        <img src="./Images/square_icon.webp" alt="">    
-                        <div class="dur">12:28</div>                    
-                    </div>
-                    <div class="desc">
-                        <div class="ch_logo">
-                            <img src="./Images/round_icon.png">
-                            <div class="center_desc">
-                                <div class="title" title="HTML Tutorial For Beginners - Free Html Tutorial">HTML Tutorial For Beginners - Free Html Tutorial</div>
-                                <div class="center_text">
-                                    <div class="ch_name">Youtube Channel <i class="fas fa-check-circle"></i> <span class="dot">.</span></div>
-                                <div class="views_time">12B views <span class="dot">.</span> 1 hour ago</div>
-                                </div>
-                            </div>
-                            <div class="three_dot">
-                                <i class="far fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="footer fixed-bottom">
+        <div class="footer_icon">
+          <i class="fas fa-home"></i>
+          <p class="icon_text">Home</p>
+        </div>
+        <div class="footer_icon">
+          <i class="far fa-fire"></i>
+          <p class="icon_text">Trending</p>
+        </div>
+        <div class="footer_icon">
+          <i class="fab fa-youtube"></i>
+          <p class="icon_text">Subscriptions</p>
+        </div>
+        <div class="footer_icon">
+          <i class="fad fa-photo-video"></i>
+          <p class="icon_text">Liabrary</p>
+        </div>
+      </div>
 
+      <div class="mb_video_cards_container">
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
             </div>
-            
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video_card">
+          <div class="video">
+            <img src="./Images/square_icon.webp" alt="" />
+            <div class="dur">12:28</div>
+          </div>
+          <div class="desc">
+            <div class="ch_logo">
+              <img src="./Images/round_icon.png" />
+              <div class="center_desc">
+                <div
+                  class="title"
+                  title="HTML Tutorial For Beginners - Free Html Tutorial"
+                >
+                  HTML Tutorial For Beginners - Free Html Tutorial
+                </div>
+                <div class="center_text">
+                  <div class="ch_name">
+                    Youtube Channel <i class="fas fa-check-circle"></i>
+                    <span class="dot">.</span>
+                  </div>
+                  <div class="views_time">
+                    12B views <span class="dot">.</span> 1 hour ago
+                  </div>
+                </div>
+              </div>
+              <div class="three_dot">
+                <i class="far fa-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="./JS/script.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
